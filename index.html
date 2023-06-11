@@ -3,12 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <script src="js/scripts.js"></script>
-  <title>Document</title>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/script.js"></script>
+  <title>Programming Language Suggestion</title>
 </head>
 <body>
-  
+  <div class="container">
+    <h1>Language Suggester</h1>
+    <div id="error-message" class="hidden">
+      <div class="card">
+        <div class="body">
+          <div class="text">
+            <div id="suggestion"></div>
+          </div>
+        </div>
+      </div> 
+    </div>
+    <form id="serious-form">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title"> How experienced are you with Gobbledigook?</h3>
+          <div class="card-text">
+            <label>         
+              <input type="radio" name="sigorRos" value="1" required> Decent song
+              <br>
+              <input type="radio" name="sigorRos" value="2"> Somewhat of a Sigor head
+              <br>
+              <input type="radio" name="sigorRos" value="3"> Just that one album
+              <br>
+              <input type="radio" name="sigorRos" value="4"> What?
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">Do you like jazz?</h3>
+          <div class="card-text">
+            <label>        
+              <input type="radio" name="theBeeMovie" value="1" required> What like Kenny G?
+              <br>
+              <input type="radio" name="theBeeMovie" value="2"> Nothing too experimental
+              <br>
+              <input type="radio" name="theBeeMovie" value="3"> Of course, unfortunately Jerry Seinfeld seems to have made a joke of the genre though
+              <br>
+              <input type="radio" name="theBeeMovie" value="4"> Jerry Seinfeld as Barry Bee Benson is the reason jazz has made a resurgence and has exposed an entire generation to a form of art that was on the edge of being forgotten
+            </label>            
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">Do you have any experience with Javascript?</h3>
+          <div class="card-text">
+            <label>
+              <input type="radio" name="javaJava" value="1" required> The only Java I know is the Folgers in my cup #imnotmewithoutmycoffee
+              <br>
+              <input type="radio" name="javaJava" value="2"> Is that some kind of coffee based musical?
+              <br>
+              <input type="radio" name="javaJava" value="3"> Basic knowledge
+              <br>
+              <input type="radio" name="javaJava" value="4"> Extremely experienced
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title"></h3>
+          <div class="card-text">
+            <label>
+              <h3>Which industry are you interested in?</h3>
+              <input type="radio" name="industry" value="1"required> Gaming
+              <br>
+              <input type="radio" name="industry" value="2"> Finance
+              <br>
+              <input type="radio" name="industry" value="3"> Healthcare
+              <br>
+              <input type="radio" name="industry" value="4"> E-commerce
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">What kind of project are you interested in?</h3>
+          <div class="card-text">
+            <label>
+              <input type="radio" name="projectType" value="1" required> Web development
+              <br>
+              <input type="radio" name="projectType" value="2"> Mobile development
+              <br>
+              <input type="radio" name="projectType" value="3"> System programming
+              <br>
+              <input type="radio" name="projectType" value="4"> Data science/machine learning
+            </label>
+          </div>
+        </div>
+      </div>
+        <p>
+          <button type="submit">Submit</button>
+        </p>
+    </form>
+  </div>
 </body>
 </html>
