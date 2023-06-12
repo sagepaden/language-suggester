@@ -44,6 +44,19 @@ function suggestLanguage(event) {
     javascript: theBeeMovie + javaJava + industry,
     go: sigorRos + theBeeMovie + projectType,
     python: sigorRos + javaJava + projectType,
-    rust: sigorRos + 
+    rust: sigorRos + theBeeMovie + industry,
+    swift: sigorRos + javaJava + industry
+  };
+
+  let maxScore = 0;
+  let maxLanguage = '';
+  for (const language in scores) {
+    if (scores.hasOwnProperty(language)) {
+      const score = scores[language];
+      if (score > maxScore) {
+        maxScore = score;
+        maxLanguage = language;
+      }
+    }
   }
-}
+
