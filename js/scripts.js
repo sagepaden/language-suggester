@@ -32,13 +32,18 @@ const suggestions = {
 function suggestLanguage(event) {
   event.preventDefault();
 
-  const sigorRos = document.querySelector('input[name="sigorRos"]:checked').value;
-  const theBeeMovie = document.querySelector('input[name="theBeeMovie"]:checked').value;
-  const javaJava = document.querySelector('input[name="javaJava"]:checked').value;
-  const projectType = document.querySelector('input[name="projectType"]:checked').value;
-  const industry = document.querySelector('input[name="industry"]:checked').value;
+  const sigorRos = parseInt(document.querySelector('input[name="sigorRos"]:checked').value);
+  const theBeeMovie = parseInt(document.querySelector('input[name="theBeeMovie"]:checked').value);
+  const javaJava = parseInt(document.querySelector('input[name="javaJava"]:checked').value);
+  const projectType = parseInt(document.querySelector('input[name="projectType"]:checked').value);
+  const industry = parseInt(document.querySelector('input[name="industry"]:checked').value);
 
   const scores = {
-    ruby = sigorRos + theBeeMovie + javaJava,
+    ruby: sigorRos + theBeeMovie + javaJava,
+    csharp: theBeeMovie + javaJava + projectType,
+    javascript: theBeeMovie + javaJava + industry,
+    go: sigorRos + theBeeMovie + projectType,
+    python: sigorRos + javaJava + projectType,
+    rust: sigorRos + 
   }
 }
