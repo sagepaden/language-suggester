@@ -50,13 +50,22 @@ function suggestLanguage(event) {
 
   let maxScore = 0;
   let maxLanguage = '';
-  for (const language in scores) {
-    if (scores.hasOwnProperty(language)) {
-      const score = scores[language];
-      if (score > maxScore) {
-        maxScore = score;
-        maxLanguage = language;
-      }
+  for (const [language, score] of Object.entries(scores)) {
+    if (score > maxScore) {
+      maxScore = score;
+      maxLanguage = language;
     }
   }
 
+  const suggestion = suggestions[maxLanguage];
+  const suggestionName = suggestion.name;
+  const suggestionDescription = suggestion.description;
+  const suggestionElement = document.getElementById('suggestion');
+  suggestionElement.innerHTML = `Based on your answers, we suggest learning ${suggestionName}! ${suggestionDescription}`;
+  suggestionElement.classList.remove('hidden');
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.querySelector("#serious-form");
+  form.addEventListener("submit", suggestLanguage);
+});
