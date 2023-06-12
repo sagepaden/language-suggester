@@ -28,3 +28,17 @@ const suggestions = {
     description: 'A powerful and intuitive programming language designed for building iOS, macOS, watchOS, and tvOS apps.'
   }
 };
+
+function suggestLanguage(event) {
+  event.preventDefault();
+
+  const sigorRos = document.querySelector('input[name="sigorRos"]:checked').value;
+  const theBeeMovie = document.querySelector('input[name="theBeeMovie"]:checked').value;
+  const javaJava = document.querySelector('input[name="javaJava"]:checked').value;
+  const projectType = document.querySelector('input[name="projectType"]:checked').value;
+  const industry = document.querySelector('input[name="industry"]:checked').value;
+
+  const scores = {
+    ruby = sigorRos + theBeeMovie + javaJava,
+  }
+}
